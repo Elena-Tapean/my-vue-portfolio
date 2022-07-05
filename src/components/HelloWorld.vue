@@ -1,35 +1,31 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest" target="_blank" rel="noopener">unit-jest</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-e2e-cypress" target="_blank" rel="noopener">e2e-cypress</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div class="row">
+      <div class="column" style="background-color:#FFFFFF;">
+        <h1>{{ msg }}</h1>
+          <p>
+            Designing user interfaces using HTML, CSS, JavaScript code and frameworks such as Vue and React. I also create icons with Figma and Git.
+          </p>
+          <h3>Projects</h3>
+            <ul>
+              <li><a href="#">My Portfolio</a></li>
+              <li><a href="https://elenatapeanpoetry.wordpress.com/">https://elenatapeanpoetry.wordpress.com/</a></li>
+              <li><a href="https://elenatapeanphotos.wordpress.com/">https://elenatapeanphotos.wordpress.com/</a></li>
+              <li><a href="#">Cooks and Books. Delicious Recipes Everyday</a></li>
+              <li><a href="#">Vue a Literary Blog</a></li>
+              <li><a href="#">React to an Interface</a></li>
+              <li><a href="#">The Webpage Game</a></li>
+            </ul>
+          <button>Hire Me</button>
+          <h3>Contact</h3>
+            <p>elena_tapean@yahoo.com</p>
+      </div>
+      <div class="column" style="background-color:#FFFFFF;">
+        <div class="clearfix">
+          <img alt="Vue logo" src="../assets/img1.jpg">
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -43,19 +39,77 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped lang="css">
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left; 
+  width: 50%; 
+  padding: 10px 80px;
+}
+.row::after {
+  content: ""; 
+  display: flex; 
+  color: #000000;
+}
+.clearfix {
+  overflow: auto;
+}
+img {
+  margin: 0;
+  padding: 0;
+  float: center;
+  width: 450px;
+  height: 600px;
+  border-style: none;
+  display: inline-block;
+}
 h3 {
-  margin: 40px 0 0;
+  font-family: Helvetica, sans-serif;
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+  text-indent: 30px;
+}
+p {
+  margin: 10px;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  display: flex;
+  line-height: 30px;
+  text-indent: 30px;
+  text-align: justify;
 }
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  text-align: left;
+  text-indent: 60px;
 }
 a {
-  color: #42b983;
+  line-height: 25px;
+  color: green;
+  opacity: 0.8;
+  font-size: 18px;
+}
+button {
+  border-style: none;
+  background-color: orange;
+  opacity: 0.9;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin: 30px 50px;
+  padding: 20px 20px;
+  border-radius: 15px;
 }
 </style>

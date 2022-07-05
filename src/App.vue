@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <img src="..\src\assets\logo.png" alt="logo">
+      <router-link to="/">Home</router-link> 
+      <router-link to="/about">About</router-link> 
+      <router-link to="/contact">Contact</router-link> 
+      <router-link to="/portfolio">Portfolio</router-link>
     </nav>
     <router-view/>
   </div>
@@ -17,15 +20,24 @@
   color: #2c3e50;
 }
 
+img {
+  width: 100px;
+  height: 30px;
+  display: inline;
+  padding-right: 300px;
+}
+
 nav {
-  padding: 30px;
+  padding: 20px;
+  border-bottom: 1px solid lightgrey;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: green;
+    padding: 70px;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: orange;
     }
   }
 }
